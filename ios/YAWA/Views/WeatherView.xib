@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="weathericons-regular-webfont.ttf">
+            <string>WeatherIcons-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherView" customModule="YAWA" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="EJD-dd-ecc"/>
+                <outlet property="labelDesc" destination="sYf-Sa-P5h" id="nl1-Wj-y5m"/>
+                <outlet property="labelTemp" destination="Swa-uw-W1V" id="PHL-EO-dzE"/>
+                <outlet property="labelTime" destination="Vhb-Dg-OEY" id="67d-yA-mTh"/>
+                <outlet property="labelWeather" destination="V2K-oc-2hr" id="TOf-YX-0Sb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="103" height="95"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhb-Dg-OEY">
+                    <rect key="frame" x="52" y="5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2K-oc-2hr">
+                    <rect key="frame" x="52" y="8" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swa-uw-W1V">
+                    <rect key="frame" x="51.5" y="10.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYf-Sa-P5h">
+                    <rect key="frame" x="51" y="13.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="V2K-oc-2hr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3tN-KG-AkO"/>
+                <constraint firstItem="sYf-Sa-P5h" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DH3-5U-Ljk"/>
+                <constraint firstItem="V2K-oc-2hr" firstAttribute="top" secondItem="Vhb-Dg-OEY" secondAttribute="bottom" constant="3" id="FmX-t8-Ip2"/>
+                <constraint firstItem="sYf-Sa-P5h" firstAttribute="top" secondItem="Swa-uw-W1V" secondAttribute="bottom" constant="3" id="NIM-Cm-ZlF"/>
+                <constraint firstItem="Vhb-Dg-OEY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="Vc1-2o-e5i"/>
+                <constraint firstItem="Vhb-Dg-OEY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fUG-Fo-0qx"/>
+                <constraint firstItem="Swa-uw-W1V" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oZz-nd-AJC"/>
+                <constraint firstItem="Swa-uw-W1V" firstAttribute="top" secondItem="V2K-oc-2hr" secondAttribute="bottom" constant="3" id="poW-RS-HCX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-102.5" y="-473.5"/>
+        </view>
+    </objects>
+</document>
