@@ -9,10 +9,9 @@
     "react": "16.4.1",
     "react-native": "^0.56.0"
   },
-
   "rnpm": {
     "assets": [
-  "./assets/fonts/"
+      "./assets/fonts/"
     ]
   }
 }

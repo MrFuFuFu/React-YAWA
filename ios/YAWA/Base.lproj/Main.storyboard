@@ -244,8 +244,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wag-jp-3yx">
-                                <rect key="frame" x="145" y="416" width="85" height="30"/>
+                                <rect key="frame" x="142" y="417" width="95" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="React YAWA"/>
                                 <connections>
                                     <action selector="onReactYAWAClick:" destination="dmF-qt-Twm" eventType="touchUpInside" id="8YL-BE-tRB"/>

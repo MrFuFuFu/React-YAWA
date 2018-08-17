@@ -63,7 +63,7 @@ export default class FlatListBasics extends React.Component {
               {item.map((weather, i) => (
               	<View key={i} style={stylesFlatList.itemWeather}>
 					<Text style={stylesFlatList.itemWeatherText}>{ item[i]["time"] }</Text>
-					<Text style={stylesFlatList.itemWeatherText}>{ item[i]["icon"] }</Text>
+					<Text style={[stylesFlatList.itemWeatherText, stylesFlatList.weatherIcon]}>{ item[i]["icon"] }</Text>
 					<Text style={stylesFlatList.itemWeatherText}>{ item[i]["temp"] }</Text>
 					<Text style={stylesFlatList.itemWeatherText}>{ item[i]["desc"] }</Text>
 				</View>
@@ -113,6 +113,11 @@ const stylesFlatList = StyleSheet.create({
   	color: 'white',
   	fontSize: 14
   },
+
+  weatherIcon: {
+  	fontFamily: "Weather Icons",
+  	fontSize: 17
+  }
 
 })
 

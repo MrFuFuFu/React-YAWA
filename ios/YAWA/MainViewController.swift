@@ -24,21 +24,7 @@ class MainViewController: UIViewController {
     }
     
     private func launchReactPage(weathers: NSDictionary) {
-        let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
-        let mockData:NSDictionary = ["scores":
-            [
-                ["name":"Alex", "value":"42"],
-                ["name":"Joel", "value":"10"]
-            ]
-        ]
-        
-        //        let rootView = RCTRootView(
-        //            bundleURL: jsCodeLocation,
-        //            moduleName: "RNHighScores",
-        //            initialProperties: mockData as [NSObject : AnyObject],
-        //            launchOptions: nil
-        //        )
-        
+        let jsCodeLocation = URL(string: "http://172.25.11.104:8081/index.bundle?platform=ios")
         let rootView = RCTRootView(
             bundleURL: jsCodeLocation,
             moduleName: "FlatListBasics",
