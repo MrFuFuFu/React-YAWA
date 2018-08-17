@@ -29,6 +29,26 @@ struct Weather {
     }
 }
 
+extension Weather {
+    func toDictionary() -> NSDictionary {
+        let temp = Double(self.temp)
+        var tempStr: String = ""
+        if let tempDouble = temp {
+            tempStr = String(Int(tempDouble)) + "℃"
+        }
+        let dict: NSDictionary = ["temp": tempStr,
+                                 "icon": WeatherIcon(code: self.icon).iconText,
+                                 "desc": self.desc,
+                                 "date": Date.dateToDateString(self.date ?? Date()),
+                                 "pressure": String(self.pressure ?? 0),
+                                 "humidity": String(self.humidity ?? 0),
+                                 "sunrise": self.sunrise ?? "",
+                                 "sunset": self.sunset ?? "",
+                                 "time": Date.dateToTimeString(self.date ?? Date())]
+        return dict
+    }
+}
+
 //Today
 extension Weather {
     static func todayWeatherFormate(json: JSON) -> Weather {
