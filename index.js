@@ -82,7 +82,7 @@ export default class FlatListBasics extends React.Component {
 const stylesFlatList = StyleSheet.create({
   container: {
    flex: 1,
-   paddingTop: 22
+   paddingTop: 64
   },
 
   itemStyle: {

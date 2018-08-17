@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
     }
     
     private func launchReactPage(weathers: NSDictionary) {
-        let jsCodeLocation = URL(string: "http://172.25.11.104:8081/index.bundle?platform=ios")
+        let jsCodeLocation = URL(string: "http://192.168.1.66:8081/index.bundle?platform=ios")
         let rootView = RCTRootView(
             bundleURL: jsCodeLocation,
             moduleName: "FlatListBasics",
@@ -34,7 +34,7 @@ class MainViewController: UIViewController {
         
         let vc = UIViewController()
         vc.view = rootView
-        self.present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func weathersToDictionary() {
