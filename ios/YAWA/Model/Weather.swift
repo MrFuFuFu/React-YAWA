@@ -20,6 +20,7 @@ struct Weather {
     var humidity: Int?
     var sunrise: String?
     var sunset: String?
+    var locality: String?
     
     init(temp: String, icon: String, desc: String, date: Date?) {
         self.temp = temp
@@ -44,6 +45,7 @@ extension Weather {
                                  "humidity": String(self.humidity ?? 0),
                                  "sunrise": self.sunrise ?? "",
                                  "sunset": self.sunset ?? "",
+                                 "locality": self.locality ?? "",
                                  "time": Date.dateToTimeString(self.date ?? Date())]
         return dict
     }
