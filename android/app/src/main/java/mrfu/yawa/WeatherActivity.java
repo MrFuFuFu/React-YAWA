@@ -2,7 +2,6 @@ package mrfu.yawa;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 
 import com.facebook.react.ReactInstanceManager;
@@ -10,12 +9,6 @@ import com.facebook.react.ReactRootView;
 import com.facebook.react.common.LifecycleState;
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
 import com.facebook.react.shell.MainReactPackage;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import mrfu.yawa.Models.RealWeather;
-import mrfu.yawa.utils.WeatherUtils;
 
 /**
  * Created by Yuan Fu on 19/08/18
