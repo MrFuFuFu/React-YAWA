@@ -13,7 +13,7 @@ import Toast_Swift
 
 class MainViewController: UIViewController {
     var arrayWeathers: [[Weather]] = []
-    let jsCodeLocation = URL(string: "http://172.25.9.1:8081/index.bundle?platform=ios")
+    let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")//192.168.1.66
 
     override func viewDidLoad() {
         super.viewDidLoad()
