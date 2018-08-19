@@ -13,6 +13,7 @@ import Toast_Swift
 
 class MainViewController: UIViewController {
     var arrayWeathers: [[Weather]] = []
+    let jsCodeLocation = URL(string: "http://172.25.9.1:8081/index.bundle?platform=ios")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,6 @@ class MainViewController: UIViewController {
     }
     
     private func launchRNWeatherDetailPage(weather: Weather) {
-        let jsCodeLocation = URL(string: "http://172.25.9.1:8081/index.bundle?platform=ios")
         let rootView = RCTRootView(
             bundleURL: jsCodeLocation,
             moduleName: "RNWeatherDetail",
@@ -43,7 +43,6 @@ class MainViewController: UIViewController {
     }
     
     private func launchReactPage(weathers: NSDictionary) {
-        let jsCodeLocation = URL(string: "http://192.168.1.66:8081/index.bundle?platform=ios")
         let rootView = RCTRootView(
             bundleURL: jsCodeLocation,
             moduleName: "FlatListBasics",

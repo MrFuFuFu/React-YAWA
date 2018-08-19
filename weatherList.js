@@ -9,29 +9,22 @@ export default class FlatListBasics extends React.Component {
         <FlatList
 
           data={this.props['AllWeather']}
-
-
-          
-
           renderItem={ ({ item, index}) => (
             <View style={ [stylesFlatList.itemStyle, {backgroundColor: bgColors[index]}] }>
               <Text style={stylesFlatList.itemDate}>{ item[0]["date"] }</Text>
-
               <View style={{flexDirection: 'row'}}>
-
-              {item.map((weather, i) => (
-              	<View key={i} style={stylesFlatList.itemWeather}>
-					<Text style={stylesFlatList.itemWeatherText}>{ item[i]["time"] }</Text>
-					<Text style={[stylesFlatList.itemWeatherText, stylesFlatList.weatherIcon]}>{ item[i]["icon"] }</Text>
-					<Text style={stylesFlatList.itemWeatherText}>{ item[i]["temp"] }</Text>
-					<Text style={stylesFlatList.itemWeatherText}>{ item[i]["desc"] }</Text>
-				</View>
+                  {item.map((weather, i) => (
+                  	<View key={i} style={stylesFlatList.itemWeather}>
+            					<Text style={stylesFlatList.itemWeatherText}>{ item[i]["time"] }</Text>
+            					<Text style={[stylesFlatList.itemWeatherText, stylesFlatList.weatherIcon]}>{ item[i]["icon"] }</Text>
+            					<Text style={stylesFlatList.itemWeatherText}>{ item[i]["temp"] }</Text>
+            					<Text style={stylesFlatList.itemWeatherText}>{ item[i]["desc"] }</Text>
+    				        </View>
               ))}
-
               </View>
             </View>
-          ) }
-
+          )}
+          keyExtractor={(item, index) => index.toString()}
         />
       </View>
     );
